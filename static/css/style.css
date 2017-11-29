@@ -1,0 +1,227 @@
+
+body, html {
+margin:;
+padding:;
+height:100%;
+}
+
+
+/* Class */
+.buttons-plantilla {
+  width: 150px;
+  display: block;
+  margin: 20px auto;
+  margin-left: 5px;
+  border-radius: 20px;  
+}
+
+.text {
+  border-radius: 0px;
+  color: rgba(255, 255, 255, .5);
+  display: inline-block;
+  font: bold 40px/100px Arial;
+  height: 80px;
+  width: 130px;
+  border: 1px solid #eee;
+  z-index: 2;
+  /*margin-bottom: 4px;*/
+  display: none; 
+  
+}
+
+.cuerpo {
+  background-color: rgba(40, 144, 127, 0.13);
+}
+
+.imagen { 
+  background-size: cover;
+  /*background-image: url('../img/backgroung-header.png') ;*/
+  background-image: url('../img/image.png') ;
+  height: 40px;
+  width: 100px;
+ }
+
+.col-width {
+  width: 104%;
+}
+
+.overflow {
+  position: relative; 
+  overflow: auto; 
+  width: 100%;
+}
+
+.log_style {
+  white-space: pre; 
+  font-family: monospace;
+}
+
+.letra {
+  color: #111;
+}
+/* id */
+
+#informacion {
+  padding: 10px;
+  margin-left: 5px;
+  border-radius: 20px;
+}
+
+#informacion:hover {
+    color: #fff;
+    background-color: rgba(68, 157, 142, 0.25);
+    border-color: rgba(169, 66, 66, 0.47);
+}
+
+#upload-button,
+#upload-button2, 
+#upload-Normal, 
+#button_SignBDOC,
+#button_CheckSingPDF, 
+#button_CheckSingBDOC,
+#button_ListarMultiples {
+  width: 150px;
+  display: block;
+  margin: 20px auto;
+  margin-left: 5px;
+  border-radius: 20px;  
+}
+
+#firmar-documento, #firmar-doc-noVisible, #check_sign, #sign_bdoc, #button_SignMultiples{
+  margin-left: 5px;
+  border-radius: 20px; 
+  display: none; 
+}
+
+
+
+#file-to-upload, 
+#file-sign-ft_Vble, 
+#file-to-normal, 
+#file-check-sign-pdf,
+#file-check-sign-bdoc,
+#file-sign-bdoc, 
+#SelectArchivos{
+  display: none;
+}
+
+#pdf-main-container, #pdf-main-container2 {
+  width: 700px;
+  margin: 30px auto;
+  display: none;
+}
+
+#pdf-loader, #pdf-loader2, #pdf-loader3 {
+  display: none;
+  text-align: center;
+  color: #999999;
+  font-size: 13px;
+  line-height: 100px;
+  height: 100px;
+}
+
+#pdf-contents, #pdf-contents2, #pdf-contents3 {
+  display: none;
+}
+
+#pdf-meta, #pdf-meta3 {
+  overflow: hidden;
+  margin: 0 0 20px 0;
+}
+
+#pdf-buttons, #pdf-buttons2, #pdf-buttons3 {
+  float: left;
+}
+
+#page-count-container,  #page-count-container3{
+  float: right;
+}
+
+#pdf-current-page, #pdf-current-page2, #pdf-current-page3 {
+  display: inline;
+}
+
+#pdf-total-pages, #pdf-total-pages2, #pdf-total-pages3 {
+  display: inline;
+}
+
+#pdf-canvas, #pdf-canvas2, #pdf-canvas3 {
+  border: 1px solid rgba(0,0,0,0.2);
+  box-sizing: border-box;
+}
+
+#page-loader, #page-loader2, #page-loader3 {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  display: none;
+  color: #999999;
+  font-size: 13px;
+}
+
+
+#download-image {
+  width: 150px;
+  display: block;
+  margin: 20px auto 0 auto;
+  font-size: 13px;
+  text-align: center;
+}
+  
+#boton1 { 
+  width: 100px; height: 50px; border: 1; float: left;  z-index: 2; cursor: pointer; 
+  
+
+}
+
+#img-2 {
+  border-radius: 0.75em;
+  z-index: 2;
+}
+
+
+
+#container1, #container2 {
+  bottom: 35%;
+  left: 80px;
+  right: 100px;
+  background: #eee;
+  height: 650px;
+  width: 500px;
+
+}
+
+
+#pdf-prev2, #pdf-prev3 { 
+  padding: 10px;
+  margin-left: 5px;
+  border-radius: 20px;
+ }
+
+
+#pdf-next2, #pdf-next3 { 
+  padding: 10px;
+  margin-left: 5px;
+  border-radius: 20px;
+ }
+
+
+#pdf-prev { 
+  padding: 10px;
+  margin-left: 5px;
+  border-radius: 20px;
+ }
+
+
+#pdf-next { 
+  padding: 10px;
+  margin-left: 5px;
+  border-radius: 20px;
+ }
+
+
+
+
+/*.menu_lateral {
+    position: fixed;
+}*/
