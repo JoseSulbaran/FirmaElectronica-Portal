@@ -547,6 +547,21 @@ h6 {
   color: white;
   text-align: center;
 }
+
+.item-small-rojo {
+  padding: 20px;
+  background-color: #f06060;
+  color: white;
+  text-align: center;
+}
+
+
+.item-small-rojo h4 {
+  color: white;
+  line-height: 24px;
+  margin: 20px 0 0 0;
+}
+
 .item-small h4 {
   color: white;
   line-height: 24px;
@@ -800,10 +815,6 @@ ul.social li a {
 
 /* Style de la aplicacón */
 
-#Contenido_Firma_Visible,
-#file-sign-ft_Vble {
-  display: none;
-}
 
 
 /* Class */

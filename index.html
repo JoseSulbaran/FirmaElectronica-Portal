@@ -13,14 +13,38 @@
     <link rel="stylesheet" href="static/css/templatemo_style.css">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" type="text/css" href="static/css/component.css" />
+    <!-- DataTables----css -->
+    <link type="text/css" rel="stylesheet" href="static/css/datatable/buttons.dataTables.min.css" />
+    <link type="text/css" rel="stylesheet" href="static/css/datatable/jquery.dataTables.min.css" />
+
     <script src="static/js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="static/lib/w3.js"></script>
 
+    <!-- ========== Plugins hwcrypto ========= -->
+    <script type="text/javascript" src="static/js/hwcrypto/gitversion.js"></script>
+    <script type="text/javascript" src="static/js/hwcrypto/hwcrypto-legacy.js"></script>
+    <script type="text/javascript" src="static/js/hwcrypto/hwcrypto.js"></script>
+    <script type="text/javascript" src="static/js/hwcrypto/hex2base.js"></script>  
 
     <!--========== Plugins para el pdf =========-->
     <script src="static/js/pdf.js"></script>
     <script src="static/js/pdf.worker.js"></script>
+   
+    <!--DataTables- - - - -js  -->      
+    <script type="text/javascript" src="static/js/datatable/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="static/js/datatable/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="static/js/datatable/dataTables.bootstrap.min.js "></script>
+    <script type="text/javascript" src="static/js/datatable/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="static/js/datatable/jszip.min.js"></script>
+    <script type="text/javascript" src="static/js/datatable/buttons.print.min.js" ></script>
+    <script type="text/javascript" src="static/js/datatable/pdfmake.min.js " ></script>
+    <script type="text/javascript" src="static/js/datatable/vfs_fonts.js" ></script>
+    <script type="text/javascript" src="static/js/datatable/buttons.html5.min.js" ></script>
+    <script type="text/javascript" src="static/js/datatable/buttons.print.min.js" ></script>
+    <script type="text/javascript" src="static/js/datatable/buttons.colVis.min.js" ></script>
 
+
+ 
 </head>
 <body>
     <div id="front">
@@ -37,7 +61,7 @@
                         <div class="main-menu">
                             <ul>
                                 <li><a href="#front">Home</a></li>
-                                <li><a href="#services">Services</a></li>
+                                <li><a href="#services">Services</a></li>                                
                                 <li><a href="#products">Products</a></li>
                                 <li><a href="#contact">Contact</a></li>
 
@@ -52,7 +76,9 @@
                                 <ul>
                                     <li><a href="#front">Home</a></li>
                                     <li><a href="#services">Services</a></li>
-                                    <li><a href="#products">Products</a></li>
+                                    <li><a href="#products">Products</a>
+
+                                    </li>
                                     <li><a href="#contact">Contact</a></li>
                                 </ul>
                             </div>
@@ -81,28 +107,28 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="service-item">                                                 
                         <!--<div w3-include-html="templates/h1.html"></div> -->
-                        <a href="#product-promotion" id="Firma_Visible" title="FIRMA VISIBLE"><span class="service-icon first efecto-giro"></span></a>
+                        <a href="#products" id="Firma_Visible" title="FIRMA VISIBLE"><span class="service-icon first efecto-giro"></span></a>
                         <h3>FIRMA VISIBLE <br>PDF</h3>
                         <p>Permite seleccionar el documento de manera de poder escoger el lugar que se vea la firma en un documento PDF.</p>                        
                     </div> <!-- /.service-item -->
                 </div> <!-- /.col-md-3 -->
                 <div class="col-md-3 col-sm-6">
                     <div class="service-item">
-                        <a href="#" title="FIRMA NO VISIBLE"><span class="service-icon first efecto-giro"></span></a>
+                        <a href="#products" id="Firma_NoVisible" title="FIRMA NO VISIBLE"><span class="service-icon first efecto-giro"></span></a>
                         <h3>FIRMA NO VISIBLE <br>PDF</h3>
                         <p>Permite firma documentos pdfs sin visualizar la firma electrónica.</p>
                     </div> <!-- /.service-item -->
                 </div> <!-- /.col-md-3 -->
                 <div class="col-md-3 col-sm-6">
                     <div class="service-item">
-                        <a href="#" title="FIRMA MULTIPLES"><span class="service-icon first efecto-giro"></span></a>
+                        <a href="#products" title="FIRMA MULTIPLES"><span class="service-icon first efecto-giro"></span></a>
                         <h3>FIRMA MULTIPLES <br>PDF</h3>
                         <p>Permite realizar varias firmas electrónicas a documentos ya existentes.</p>
                     </div> <!-- /.service-item -->
                 </div> <!-- /.col-md-3 -->
                 <div class="col-md-3 col-sm-6">
                     <div class="service-item">
-                        <a href="#" title="FIRMA BDOC"><span class="service-icon first efecto-giro"></span></a>
+                        <a href="#products" id="Firma_Bdoc"  title="FIRMA BDOC"><span class="service-icon first efecto-giro"></span></a>
                         <h3>FIRMA DOCUMENTOS<br>BDOC</h3>
                         <p>Permite firma cualquier tipo de documento, donde se construirá un contenedor .bdoc con los documentos firmas.</p>
                     </div> <!-- /.service-item -->
@@ -112,14 +138,14 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="service-item">                                                 
                         <!--<div w3-include-html="templates/h1.html"></div> -->
-                        <a href="#" title="VERIFICAR PDF"><span class="service-icon first efecto-giro"></span></a>
+                        <a href="#products" id="Verificar_PDF"  title="VERIFICAR PDF"><span class="service-icon first efecto-giro"></span></a>
                         <h3>VERIFICAR DOCUMENTOS<br>PDF</h3>
                         <p>Permite verificar las información de la firma electrónica que posee el documentos PDF.</p>                        
                     </div> <!-- /.service-item -->
                 </div> <!-- /.col-md-3 -->
                 <div class="col-md-3 col-sm-6">
                     <div class="service-item">
-                        <a href="#" title="VERIFICAR BDOC"><span class="service-icon first efecto-giro"></span></a>
+                        <a href="#products" id="Verificar_BDOC" title="VERIFICAR BDOC"><span class="service-icon first efecto-giro"></span></a>
                         <h3>VERIFICAR DOCUMENTOS<br>BDOC</h3>
                         <p>Permite firma documentos pdfs sin visualizar la firma electronica.</p>
                     </div> <!-- /.service-item -->
@@ -128,86 +154,302 @@
         </div> <!-- /.container -->
     </div> <!-- /#services -->
 
-    <div id="product-promotion" class="content-section">
-        <div id ="Contenido_Firma_Visible">                
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h1 class="section-title">FIRMA VISIBLE (PDF)</h1>
-                    </div> <!-- /.col-md-12 -->
-                </div> <!-- /.row -->
-                <div class="row">
-                    <div class="col-md-2 col-sm-3">
-                        <div class="item-small text-center">
-                            <div class="row " >
-                                <div class="hi-icon-wrap hi-icon-effect-6">                        
-                                    <a type="button" id="Cargar_file_Visible" class="hi-icon hi-icon-link"></a><h4>CARGAR</h4>              
-                                </div>                         
+    <div id="products" class="content-section"><!-- <div> product-FirmaVisible -->
+        <div id="product-FirmaVisible" class="content-section"><!-- <div> product-FirmaVisible -->
+            <div id ="Contenido_Firma_Visible">                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h1 class="section-title">FIRMA VISIBLE (PDF)</h1>
+                        </div> <!-- /.col-md-12 -->
+                    </div> <!-- /.row -->
+                    <div class="row">
+                        <div class="col-md-2 col-sm-3">
+                            <div  class="item-small">
+                                <div class="row" >
+                                    <div class="hi-icon-wrap hi-icon-effect-6">                        
+                                        <a type="button" id="Cargar_file_Visible" class="hi-icon hi-icon-link"></a><h4>CARGAR</h4> 
+                                    </div>                                                         
+                                </div>
+                                <div id="Formato_Visible" class="row col-md-4" >
+                                    <div class="text imagen text-center" id="texto"></div>             
+                                </div>
+                            </div> <!-- /.item-small -->
+                            <div class="service-item" >
+                                <div class="text-center" id="respuesta" ></div>
+                                <div class="text-center" id="log"></div>
                             </div>
-                            <input type="file" id="file-sign-ft_Vble" accept="application/pdf" />
-                        </div> <!-- /.item-small -->
-                    </div> <!-- /.col-md-2 -->
-                    <div class="col-md-8 col-sm-6">
-                        <div class="item-large">
-                            <div class="well cuerpo" >
-                              <div id="pdf-main-container">
-                                <div id="pdf-loader2">Cargando documento ...</div>
-                                <div id="pdf-contents2">
-                                  <div id="pdf-meta2">
-                                    <div id="pdf-buttons2">
-                                      <button type="button" id="pdf-prev2" class="btn btn-default btn-sm">
-                                        <span class="glyphicon glyphicon-step-backward"></span> 
-                                      </button>
-                                      <button type="button" id="pdf-next2" class="btn btn-default btn-sm">
-                                        <span class="glyphicon glyphicon-step-forward"></span> 
-                                      </button>                                
-                                    </div>
-                                    <div id="page-count-container">Página <div id="pdf-current-page2"></div> de <div id="pdf-total-pages2"></div></div>
+                        </div> <!-- /.col-md-2 -->
+                        <div class="col-md-8 col-sm-6">
+                            <div class="item-large">
+                                <div class="well cuerpo" >
+                                  <div id="pdf-main-container">
+                                    <div id="pdf-loader2">Cargando documento ...</div>
+                                    <div id="pdf-contents2">
+                                      <div id="pdf-meta2 ">
+                                        <div id="pdf-buttons2">
+                                          <button type="button" id="pdf-prev2" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-step-backward"></span> 
+                                          </button>
+                                          <button type="button" id="pdf-next2" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-step-forward"></span> 
+                                          </button>                                
+                                        </div>
+                                        <div id="page-count-container" class="color-table">Página <div class="color-table" id="pdf-current-page2"></div> de <div class="color-table" id="pdf-total-pages2"></div></div>
+                                      </div>
+                                      <div class="overflow" >
+                                        <div id="container1" class=".cropper-hidden">
+                                        </div>
+                                        <br>
+                                        <br>
+                                      </div>          
+                                      </div>
+                                      <canvas id="pdf-canvas2" width="500"></canvas>
+                                      <div id="page-loader2">Cargando página ...</div>
                                   </div>
-                               
-                                  <div class="overflow" >
-
-                                    <div id="container1" class=".cropper-hidden">
-                                      <!--<div class="ball blue">sdsa</div>-->
+                                </div>
+                                  <!-- MyData table -->
+                                 <table id="myJson" class="display color-table" cellspacing="0" width="100%"> 
+                                 </table>              
+                                 <div id="Dialogo"> </div>                                  
+                            </div><!-- /.item-large -->
+                        </div> <!-- /.col-md-8 col-sm-6 -->
+                        <div class="col-md-2 col-sm-3">
+                            <div id="Lateral-derecho" class="item-small-rojo">
+                                <div class="row">
+                                    <div id="icon-derecho" class="hi-icon-wrap hi-icon-effect-3 hi-icon-effect-3a">
+                                        <a disabled type="button" id="Firmar_file_Visible" class="hi-icon hi-icon-pencil"></a><h4>FIRMAR</h4>
+                                        <form id ="Form-Format-Visible"  enctype='multipart/form-data' >  
+                                            <button type="submit" id="form-button"></button>
+                                            <input type="file" id="file-sign-ft_Vble" accept="application/pdf" />
+                                        </form>
+                                    </div>                         
+                                </div>
+                            </div> <!-- /.item-small -->
+                        </div> <!-- /.col-md-2 -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div>
+        </div><!--  product-FirmaVisible </div>-->
+        <div id="product-FirmaNoVisible" class="content-section"><!-- <div> product-FirmaNOVisible -->
+            <div id ="Contenido_Firma_No_Visible">                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h1 class="section-title">FIRMA NO VISIBLE (PDF)</h1>
+                        </div> <!-- /.col-md-12 -->
+                    </div> <!-- /.row -->
+                    <div class="row">
+                        <div class="col-md-2 col-sm-3">
+                            <div  class="item-small">
+                                <div class="row" >
+                                    <div class="hi-icon-wrap hi-icon-effect-6">                        
+                                        <a type="button" id="Cargar_file_No_Visible" class="hi-icon hi-icon-link"></a><h4>CARGAR</h4> 
+                                    </div>                                                         
+                                </div>
+                            </div> <!-- /.item-small -->                        
+                            <div class="service-item" >                            
+                                <div class="text-center" id="respuesta_NoVisible" ></div>
+                                <div class="text-center" id="log_NoVisible"></div>                            
+                            </div>                            
+                        </div> <!-- /.col-md-2 -->
+                        <div class="col-md-8 col-sm-6">
+                            <div class="item-large">
+                                <div class="well cuerpo" >
+                                    <div id="pdf-main-container2">
+                                      <div id="pdf-loader3">Cargando documento ...</div>
+                                      <div id="pdf-contents3">
+                                        <div id="pdf-meta3">
+                                          <div id="pdf-buttons3">
+                                            <button type="button" id="pdf-prev3" class="btn btn-default btn-sm">
+                                              <span class="glyphicon glyphicon-step-backward"></span> 
+                                            </button>
+                                            <button type="submit" id="pdf-next3" class="btn btn-default btn-sm">
+                                              <span class="glyphicon glyphicon-step-forward"></span> 
+                                            </button>                                
+                                          </div>
+                                          <div id="page-count-container3" class="color-table" >Página <div id="pdf-current-page3" class="color-table" ></div> de <div id="pdf-total-pages3" class="color-table"></div></div>
+                                        </div>
+                                        <div class="overflow">
+                                          <div id="container2" class=".cropper-hidden">
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <canvas id="pdf-canvas3" width="500"></canvas>
+                                      <div id="page-loader3">Cargando página ...</div>
                                     </div>
-                                    <br>
-                                    <br>
-                                  </div>          
+                                </div>
+                                  <!-- MyData table -->
+                                <table id="myJsonPDF_NO_VISIBLE" class="display color-table" cellspacing="0" width="100%"> 
+                                </table>              
+                                <div id="Dialogo_signNoVisible"> </div>                                  
+                            </div> <!-- /.item-large -->
+                        </div> <!-- /.col-md-8 -->
+                        <div class="col-md-2 col-sm-3">
+                            <div id="Lateral-derecho-NoVisible" class="item-small-rojo">
+                                <div class="row">
+                                    <div id="icon-derecho-NoVisible" class="hi-icon-wrap hi-icon-effect-3 hi-icon-effect-3a">
+                                        <a disabled type="button" id="Firmar_file_NoVisible" class="hi-icon hi-icon-pencil"></a><h4>FIRMAR</h4>
+                                        <form id="Form-Format-No-Visible" enctype='multipart/form-data' >      
+                                            <button type="submit" id="form-button_NoVisible"></button>
+                                            <input type="file" id="file-to-normal" accept="application/pdf" />
+                                        </form>
+                                    </div>                         
+                                </div>
+                            </div> <!-- /.item-small -->
+                        </div> <!-- /.col-md-2 -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div>
+        </div><!--  product-FirmaNOVisible </div>-->
+        <div id="product-FirmaBDOC" class="content-section"><!-- <div> product-FirmaBDOC -->
+            <div id ="Contenido_FirmaBDOC">                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h1 class="section-title">FIRMAR DOCUMENTOS (BDOC)</h1>
+                        </div> <!-- /.col-md-12 -->
+                    </div> <!-- /.row -->
+                    <div class="row">
+                        <div class="col-md-2 col-sm-3">
+                            <div  class="item-small">
+                                <div class="row" >
+                                    <div class="hi-icon-wrap hi-icon-effect-6">                        
+                                        <a type="button" id="Cargar_file_bdoc" class="hi-icon hi-icon-link"></a><h4>CARGAR</h4> 
+                                    </div>                                                         
+                                </div>
+                            </div> <!-- /.item-small -->                        
+                            <div class="service-item" >                            
+                                <div class="text-center" id="respuesta_bdoc" ></div>
+                                <div class="text-center" id="log_bdoc"></div>                            
+                            </div>                            
+                        </div> <!-- /.col-md-2 -->
+                        <div class="col-md-8 col-sm-6">
+                            <div class="item-large">
+                                <div class="well cuerpo" id="contentBdoc" >
+                                </div>
+                                  <!-- MyData table -->
+                                <table id="myJsonBDOC" class="display color-table" cellspacing="0" width="100%">
+                                </table>  
+                                <div id="Dialogo_SignBdoc"> </div>                                   
+                            </div> <!-- /.item-large -->
+                        </div> <!-- /.col-md-8 -->
+                        <div class="col-md-2 col-sm-3">
+                            <div id="Lateral-derecho-Bdoc" class="item-small-rojo">
+                                <div class="row">
+                                    <div id="icon-derecho-Bdoc" class="hi-icon-wrap hi-icon-effect-3 hi-icon-effect-3a">
+                                        <a disabled type="button" id="Firmar_file_bdoc" class="hi-icon hi-icon-pencil"></a><h4>FIRMAR</h4>
+                                        <form id ="Form-sign-bdoc"  enctype='multipart/form-data' >      
+                                            <button type="submit" id="button_SignBDOC"></button>
+                                            <input type="file" id="file-sign-bdoc" multiple data-min-file-count="1">
+                                        </form>
+                                    </div>                         
+                                </div>
+                            </div> <!-- /.item-small -->
+                        </div> <!-- /.col-md-2 -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div>
+        </div><!--  product-FirmaBDOC </div>-->
+        <div id="product-VerificarPDF" class="content-section"><!-- <div> product-VerificarPDF -->
+            <div id ="Contenido_VerificarPDF">                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h1 class="section-title">VERIFICAR DOCUMENTOS (PDF)</h1>
+                        </div> <!-- /.col-md-12 -->
+                    </div> <!-- /.row -->
+                    <div class="row">
+                        <div class="col-md-2 col-sm-3">
+                            <div  class="item-small">
+                                <div class="row" >
+                                    <div class="hi-icon-wrap hi-icon-effect-6">                        
+                                        <a type="button" id="CheckSignPDF" class="hi-icon hi-icon-link"></a><h4>CARGAR</h4> 
+                                    </div>                                                         
+                                </div>
+                            </div> <!-- /.item-small -->                                                   
+                        </div> <!-- /.col-md-2 -->
+                        <div class="col-md-8 col-sm-6">
+                            <div class="item-large">
+                                <div class="well cuerpo text-center" id="MensajePDF"></div>
+                                  <!-- MyData table -->
+                                <table id="myCkeckPDF" class="display color-table" cellspacing="0" width="100%">
+                                </table>  
+                                <div id="Dialogo_CheckPDF"></div>                                   
+                            </div> <!-- /.item-large -->
+                        </div> <!-- /.col-md-8 -->
+                        <div class="col-md-2 col-sm-3">
+                            <div id="Lateral-derecho-CheckPDF" class="item-small-rojo">
+                                <div class="row">
+                                    <div id="icon-derecho-CheckPDF" class="hi-icon-wrap hi-icon-effect-3 hi-icon-effect-3a">
+                                        <a disabled type="button" id="Submit-Form-check-pdf" class="hi-icon hi-icon-refresh"></a><h4>VERIFICAR</h4>
+                                        <form id ="Form-check-pdf"  enctype='multipart/form-data' >      
+                                            <button type="submit" id="button_CheckPDF"></button>
+                                            <input type="file" id="verificar-file-pdf" accept="application/pdf" >
+                                        </form>
+                                    </div>                         
+                                </div>
+                            </div> <!-- /.item-small -->
+                        </div> <!-- /.col-md-2 -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div>
+        </div><!--  product-VerificarPDF </div>-->
+        <div id="product-VerificarBDOC" class="content-section"><!-- <div> product-VerificarBDOC -->
+            <div id ="Contenido_VerificarBDOC">                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h1 class="section-title">VERIFICAR DOCUMENTOS (BDOC)</h1>
+                        </div> <!-- /.col-md-12 -->
+                    </div> <!-- /.row -->
+                    <div class="row">
+                        <div class="col-md-2 col-sm-3">
+                            <div  class="item-small">
+                                <div class="row" >
+                                    <div class="hi-icon-wrap hi-icon-effect-6">                        
+                                        <a type="button" id="CheckSignBDOC" class="hi-icon hi-icon-link"></a><h4>CARGAR</h4> 
+                                    </div>                                                         
+                                </div>
+                            </div> <!-- /.item-small -->                                                   
+                        </div> <!-- /.col-md-2 -->
+                        <div class="col-md-8 col-sm-6">
+                            <div class="item-large">
+                                <div class="well cuerpo text-center" id="MensajeBDOC" ></div>
+                                  <!-- MyData table -->
+                                <table id="myCkeckBDOC" class="display color-table" cellspacing="0" width="100%">
+                                </table>  
+                                <div id="Dialogo_CheckBDOC"> </div>                                   
+                            </div> <!-- /.item-large -->
+                        </div> <!-- /.col-md-8 -->
+                        <div class="col-md-2 col-sm-3">
+                            <div id="Lateral-derecho-CheckBDOC" class="item-small-rojo">
+                                <div class="row">
+                                    <div id="icon-derecho-CheckBDOC" class="hi-icon-wrap hi-icon-effect-3 hi-icon-effect-3a">
+                                        <a disabled type="button" id="Submit-Form-check-BDOC" class="hi-icon hi-icon-refresh"></a><h4>VERIFICAR</h4>
+                                        <form id ="Form-check-BDOC"  enctype='multipart/form-data' >      
+                                            <button type="submit" id="button_CheckBDOC"></button>
+                                            <input type="file" id="verificar-file-BDOC" multiple data-min-file-count="1" >
+                                        </form>
+                                    </div>                         
+                                </div>
+                            </div> <!-- /.item-small -->
+                        </div> <!-- /.col-md-2 -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div>
+        </div><!--  product-VerificarPDF </div>-->
 
-                                  </div>
-                                  <canvas id="pdf-canvas2" width="500"></canvas>
-                                  <div id="page-loader2">Cargando página ...</div>
-                              
-                          </div>
-
-                            <img src="static/images/promotion/promotion2.jpg" alt="Product 2">
-
-                            
-                        </div> <!-- /.item-large -->
-                    </div> <!-- /.col-md-8 -->
-                    <div class="col-md-2 col-sm-3">
-                        <div class="item-small">
-                            <div class="row " >
-                                <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">                        
-                                    <a type="button" id="Firmar_file_Visible" class="hi-icon hi-icon-pencil"></a><h4>FIRMAR</h4>              
-                                </div>                         
-                            </div>
-                        </div> <!-- /.item-small -->
-                    </div> <!-- /.col-md-2 -->
-                </div> <!-- /.row -->
-            </div> <!-- /.container -->
 
 
-        </div>
-    </div>
-    <!-- Productos y contactos -->
 
+    </div><!-- product-->
     <div class="site-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-6">
                     <span id="copyright">
-                    	Copyright &copy; 2014 <a href="#">Company Name</a>
+                        Copyright &copy; 2017 <a href="#">Company Name</a>
                     </span>
 
             </div> <!-- /.col-md-6 -->
@@ -225,17 +467,42 @@
     </div> <!-- /.site-footer -->
 
     
-    <script src="static/js/vendor/jquery-1.10.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
     <script src="static/js/jquery.easing-1.3.js"></script>
     <script src="static/js/bootstrap.js"></script>
     <script src="static/js/plugins.js"></script>
     <script src="static/js/main.js"></script>
-    <script>
-    w3.includeHTML();
-    </script>   
+ 
     
+
+    <script src="static/js/draggable.js"></script>
+    <script src="static/js/jquery/jquery-ui.js"></script> 
+    <script src="static/js/constantes.js"></script>    
+    <script src="static/js/Respuestas.js"></script>
+    <script src="static/js/services.js"></script>
+
+    <!-- Firma PDF (Visible)-->
+    <script src="static/js/FirmaPDF/Visible/myInfoDataTablePDF.js"></script>
+    <script src="static/js/FirmaPDF/Visible/DraggableSortable.js"></script>
     <script src="static/js/FirmaPDF/Visible/FirmaVisible.js"></script>
+    <script src="static/js/FirmaPDF/Visible/FirmarDocumentoPdf.js"></script>
+
+    <!-- Firma PDF (No Visible)-->
+    <script src="static/js/FirmaPDF/NoVisible/myInfoDataTablePDF_NoVisible.js"></script>   
+    <script src="static/js/FirmaPDF/NoVisible/FirmaNoVisiblePDF.js"></script>
+    <script src="static/js/FirmaPDF/NoVisible/FirmaNoVisible.js"></script>
+
+    <!-- Firma BDOC -->
+    <script src="static/js/FirmaBDOC/myInfoDataTableSignBDOC.js"></script>  
+    <script src="static/js/FirmaBDOC/firmarDocumentoBDOC.js"></script> 
+
+    <!-- Verificar sign PDF-->
+    <script src="static/js/VerificarSign/myInfoDataTableCheckPDF.js"></script>
+    <script src="static/js/VerificarSign/myInfoDataTableCheckBDOC.js"></script>  
+    <script src="static/js/VerificarSign/CheckSignPDFandBDOC.js"></script>  
+
+
+
 
     <!-- templatemo 401 sprint -->
 </body>

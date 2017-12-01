@@ -121,7 +121,7 @@ $("#file-sign-ft_Vble").on('change', function() {
 
 
   if (__CLICK == 0){
-      $('#firmar-documento').attr("disabled","disabled").show();
+      $('#Firmar_file_Visible').attr("disabled","disabled");
       $('#texto').show();
       __CLICK += 1;
   }
@@ -156,11 +156,4 @@ $("#pdf-next2").on('click', function() {
 });
 
 
-
-
-
-
-$("#Firma_Visible").on('click', function() {
-	$("#Contenido_Firma_Visible").show();
-});
 

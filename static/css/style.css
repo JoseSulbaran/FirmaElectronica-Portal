@@ -39,6 +39,7 @@ height:100%;
   background-image: url('../img/image.png') ;
   height: 40px;
   width: 100px;
+  cursor: pointer;
  }
 
 .col-width {
@@ -58,6 +59,15 @@ height:100%;
 
 .letra {
   color: #111;
+}
+
+.background {
+    background: #0e83cd;
+  }
+
+
+.color-table {
+  color: #1d1b1b;
 }
 /* id */
 
@@ -120,7 +130,7 @@ height:100%;
   height: 100px;
 }
 
-#pdf-contents, #pdf-contents2, #pdf-contents3 {
+#pdf-contents, #pdf-contents2, #pdf-contents3, #form-button, #form-button_NoVisible{
   display: none;
 }
 
@@ -219,6 +229,22 @@ height:100%;
   border-radius: 20px;
  }
 
+
+#Contenido_Firma_Visible,
+#Contenido_Firma_No_Visible,
+#Contenido_FirmaBDOC,
+#Contenido_VerificarPDF,
+#Contenido_VerificarBDOC,
+#button_SignBDOC,
+#button_CheckPDF,
+#button_CheckBDOC
+#file-sign-ft_Vble,
+#verificar-file-pdf,
+#verificar-file-BDOC,
+#Form-check-BDOC,
+#file-sign-bdoc {
+  display: none;
+}
 
 
 
