@@ -77,11 +77,55 @@ height:100%;
   border-radius: 20px;
 }
 
+
 #informacion:hover {
     color: #fff;
     background-color: rgba(68, 157, 142, 0.25);
     border-color: rgba(169, 66, 66, 0.47);
 }
+
+
+#iconn {
+  padding: 10px;
+  margin-left: 5px;
+  border-radius: 20px;
+}
+
+
+#iconn:hover {
+    color: #fff;
+    background-color: rgba(68, 157, 142, 0.25);
+    border-color: rgba(169, 66, 66, 0.47);
+}
+
+
+#iconnn {
+  padding: 1px;
+  /*margin-left: 1000px;*/
+  border-radius: 100px;
+}
+
+
+#iconnn:hover {
+    color: #fff;
+    background-color: rgb(228, 11, 11);
+    border-color: rgba(169, 66, 66, 0.47);
+}
+
+
+#iconPencil {
+  padding: 1px;
+  /*margin-left: 1000px;*/
+  border-radius: 100px;
+}
+
+
+#iconPencil:hover {
+    color: #fff;
+    background-color: #26b864;
+    border-color: rgba(169, 66, 66, 0.47);
+}
+
 
 #upload-button,
 #upload-button2, 
@@ -235,6 +279,7 @@ height:100%;
 #Contenido_FirmaBDOC,
 #Contenido_VerificarPDF,
 #Contenido_VerificarBDOC,
+#Contenido_FirmaMultiples,
 #button_SignBDOC,
 #button_CheckPDF,
 #button_CheckBDOC

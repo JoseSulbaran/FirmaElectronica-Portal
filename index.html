@@ -42,9 +42,22 @@
     <script type="text/javascript" src="static/js/datatable/buttons.html5.min.js" ></script>
     <script type="text/javascript" src="static/js/datatable/buttons.print.min.js" ></script>
     <script type="text/javascript" src="static/js/datatable/buttons.colVis.min.js" ></script>
-
-
- 
+<!--
+<style type="text/css">
+.carousel{
+    background: #2f4357;
+    margin-top: 20px;
+}
+.carousel .item{
+    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+.bs-example{
+  margin: 20px;
+}</style>
+ -->
 </head>
 <body>
     <div id="front">
@@ -96,6 +109,8 @@
             </li>
         </ul>
     </div> <!-- /.site-slider -->
+    <br><br><br>
+  
     <div id="services" class="content-section">
         <div class="container">
             <div class="row">
@@ -121,7 +136,7 @@
                 </div> <!-- /.col-md-3 -->
                 <div class="col-md-3 col-sm-6">
                     <div class="service-item">
-                        <a href="#products" title="FIRMA MULTIPLES"><span class="service-icon first efecto-giro"></span></a>
+                        <a href="#products" id="FirmaMultiples" title="FIRMA MULTIPLES"><span class="service-icon first efecto-giro"></span></a>
                         <h3>FIRMA MULTIPLES <br>PDF</h3>
                         <p>Permite realizar varias firmas electrónicas a documentos ya existentes.</p>
                     </div> <!-- /.service-item -->
@@ -302,6 +317,36 @@
                 </div> <!-- /.container -->
             </div>
         </div><!--  product-FirmaNOVisible </div>-->
+        <div id="product-FirmaMultiples" ><!-- <div> product-FirmaNOVisible -->
+            <div id ="Contenido_FirmaMultiples">   
+                <div id="Dialogo_Multiple"></div>             
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h1 class="section-title">FIRMA MULTIPLES (PDF)</h1>
+                        </div> <!-- /.col-md-12 -->
+                    </div> <!-- /.row -->
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" id="carousel_inner">
+                      </div>
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                  </div>                     
+                </div> <!-- /.container -->
+
+               
+
+            </div>
+        </div><!--  product-FirmaNOVisible </div>-->
+
         <div id="product-FirmaBDOC" class="content-section"><!-- <div> product-FirmaBDOC -->
             <div id ="Contenido_FirmaBDOC">                
                 <div class="container">
@@ -442,8 +487,11 @@
 
 
 
-
     </div><!-- product-->
+
+
+   
+
     <div class="site-footer">
         <div class="container">
             <div class="row">
@@ -491,6 +539,11 @@
     <script src="static/js/FirmaPDF/NoVisible/myInfoDataTablePDF_NoVisible.js"></script>   
     <script src="static/js/FirmaPDF/NoVisible/FirmaNoVisiblePDF.js"></script>
     <script src="static/js/FirmaPDF/NoVisible/FirmaNoVisible.js"></script>
+
+    <!-- Firma Multiples (PDF)-->
+    <script src="static/js/FirmaMultiplesPDF/FirmaMultiples.js"></script>  
+    <script src="static/js/FirmaMultiplesPDF/myInfoDataTableCheckPDFMultiples.js"></script>  
+    
 
     <!-- Firma BDOC -->
     <script src="static/js/FirmaBDOC/myInfoDataTableSignBDOC.js"></script>  

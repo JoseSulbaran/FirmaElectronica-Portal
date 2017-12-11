@@ -623,6 +623,7 @@ h6 {
   transition: all 200ms linear;
   opacity: 0;
   filter: alpha(opacity=0);
+  cursor: pointer;
 }
 .product-item .item-thumb .overlay .overlay-inner {
   width: 100%;
