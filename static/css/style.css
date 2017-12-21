@@ -69,6 +69,14 @@ height:100%;
 .color-table {
   color: #1d1b1b;
 }
+
+
+
+
+
+
+
+
 /* id */
 
 #informacion {
@@ -113,14 +121,21 @@ height:100%;
 }
 
 
-#iconPencil {
+#iconPencil,
+#iconPencil2,
+#iconPencil3,
+#iconPencil4
+{
   padding: 1px;
   /*margin-left: 1000px;*/
   border-radius: 100px;
 }
 
 
-#iconPencil:hover {
+#iconPencil:hover,
+#iconPencil2:hover,
+#iconPencil3:hover,
+#iconPencil4:hover {
     color: #fff;
     background-color: #26b864;
     border-color: rgba(169, 66, 66, 0.47);
@@ -224,8 +239,6 @@ height:100%;
   
 #boton1 { 
   width: 100px; height: 50px; border: 1; float: left;  z-index: 2; cursor: pointer; 
-  
-
 }
 
 #img-2 {
@@ -292,7 +305,17 @@ height:100%;
 }
 
 
+#respuesta_FirmaMultiples {
+
+}
+
+
 
 /*.menu_lateral {
     position: fixed;
 }*/
+
+
+
+.myModal .modal-dialogmyModal { width: 60%; height: 70% };
+

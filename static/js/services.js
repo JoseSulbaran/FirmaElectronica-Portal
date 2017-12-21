@@ -65,3 +65,5 @@ $("#Verificar_BDOC").on('click', function() {
   	$('#Contenido_VerificarBDOC').show();
 });
 
+
+

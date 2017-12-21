@@ -56,6 +56,12 @@ textarea {
   list-style: none;
 }
 
+.site-slider1 ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .item-small, .item-large, .product-item .item-thumb {
   overflow: hidden;
 }
@@ -312,7 +318,7 @@ h6 {
 .site-header {
   position: fixed;
   min-height: 102px;
-  height: 102px;
+  height: 145px;
   width: 100%;
   z-index: 9999;
   background-color: #161616;
@@ -403,9 +409,17 @@ h6 {
   margin: 0;
 }
 
+.site-slider1 {
+  padding-top: 142px;
+}
+.site-slider1 ul li {
+  float: left;
+  margin: 0;
+}
+
 .bx-wrapper img {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
+  /*opacity: 0.8;*/
+  filter: alpha(opacity=90);
 }
 
 .bx-wrapper {

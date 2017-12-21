@@ -18,8 +18,10 @@
   *zoom: 1;
 }
 
+
 .bx-wrapper img {
   width: 100%;
   max-width: 100%;
-  display: block;
+  /*display: block;*/
 }
+

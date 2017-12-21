@@ -75,12 +75,8 @@ function FinalizarFirmaMultiples(signature){
 		xhrFields: {withCredentials: true},
 		headers: {"Authorization":"Basic YWRtaW46YWRtaW4="},
 		success: function(data, textStatus, jqXHR){
-
-			//var linkToDownload = "<a href=\"https://murachi.cenditel.gob.ve/Murachi/0.1/archivos/descargas/" + data['signedFileId'] +"\"><h4>Descargar archivo firmado</h4></a>";
-			var linkToDownload = "<a href=\"https://192.168.12.154:8443/Murachi/0.1/archivos/descargas/" + data['signedFileId'] +"\"><h4>Descargar archivo firmado</h4></a>";
-			document.getElementById("log").innerHTML = '';   
-			document.getElementById("respuesta").innerHTML = '<center><h2>Archivo firmado correctamente:</h2> <br>'+linkToDownload+'</center>';  			
-
+  
+			document.getElementById("respuesta_FirmaMultiples").innerHTML = '<p>Archivo firmado correctamente</ṕ>';  			
 			InfoDocumentDataTablePDFMultiples(data['signedFileId']);		
 
 		},
@@ -153,7 +149,7 @@ function ObtenerHashPDFServerMultiples(parameters,cert){
 
 //Segundo paso (Seleccionamos el Certificado Firmante)
 function Firmar_Multiple(fileId){
-
+	document.getElementById("respuesta_FirmaMultiples").innerHTML = ''; 
 	// identificador del archivo en el servidor
 	
 
@@ -195,7 +191,7 @@ function Firmar_Multiple(fileId){
                  error = "No hay soporte para el manejo del certificado";
 			}
   			//alert("getCertificate() failed: " + err);
-  			$("#respuesta").html("getCertificate() failed: " + error);
+  			$("#respuesta_FirmaMultiples").html("getCertificate() failed: " + error);
 		}
 
 	);
@@ -222,7 +218,6 @@ function FirmaMultiplesPDF(){
 			var html1 = '';
 			var cont = 0;
 
-			//for (var i = 0; i < response.murachiWorkingDirectoryContent.length; i++)
 			for (var i = 0; i < response.murachiWorkingDirectoryContent.length; i++)
 			{ 
 				var data =  response.murachiWorkingDirectoryContent[i].split(".");
@@ -244,10 +239,8 @@ function FirmaMultiplesPDF(){
 					 
 				}
 				cont +=1;
-				//$('#myCarousel #carousel_inner').html(html);
-				//console.log(cont);
-				if (cont%2 == 0){
 
+				if (cont%2 == 0){
 					if (i == 1){
 						html1 += '<div class="item active">';	
 					}
@@ -257,8 +250,6 @@ function FirmaMultiplesPDF(){
 					html1 += '<div class="row col-sm-12 col-md-offset-3">';
 					html1 += html; 
 					html1 += '</div></div>';
-					//console.log(html1);
-
 					html = '';
 				}
 
@@ -279,17 +270,30 @@ function FirmaMultiplesPDF(){
 
 
 function Dialog_Multiple(id){
-	//             \<embed src="https://murachi.cenditel.gob.ve/Murachi/0.1/archivos/listadopdf/'+cadena+'" width="100" height="500" frameborder="0"></embed>\
+	// \<embed src="https://murachi.cenditel.gob.ve/Murachi/0.1/archivos/listadopdf/'+cadena+'" width="100" height="500" frameborder="0"></embed>\
+	$("#iframe").show();
+	$("#myJsonPDFMultiples_wrapper").hide();   
+	document.getElementById("title_myModalMultiple").innerHTML = 'Documento N° ('+id+')';
+	document.getElementById("respuesta_FirmaMultiples").innerHTML = ''; 
+	$("iframe#iframe").removeAttr("src")
+	$("iframe#iframe").attr("src",'https://murachi.cenditel.gob.ve/Murachi/0.1/archivos/listadopdf/'+id);
+	$("td#1 #iconPencil").attr("href",'https://murachi.cenditel.gob.ve/Murachi/0.1/archivos/descargas/'+id);
+	$("td#2 #iconPencil2").attr("onclick",'javascript:VisualizarPDF(\'' + id + '\')');
+	$("td#3 #iconPencil3").attr("onclick",'javascript:InfoDocumentDataTablePDFMultiples(\'' + id + '\')');
+	$("td#4 #iconPencil4").attr("onclick",'javascript:Firmar_Multiple(\'' + id + '\')');
+  
+	
+/*
    document.getElementById("Dialogo_Multiple").innerHTML = '\
     <style>\
      .modal .modal-dialog { width: 80%; height: 80%, };\
     </style>\
-    <div id="myModalMultiple" class="modal fade" role="dialog"><br><br><br>\
+    <div class="modal fade" id="myModalMultipl" data-modal-index="1"><br><br><br>\
        <div class="modal-dialog">\
          <div class="modal-content">\
            <div id = "title" class="modal-header">\
-             <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->\
-             <h2 class="modal-title text-primary"><center> Firma el documento ('+id+')</center></h2>\
+             <br><br><button type="button" class="close" data-dismiss="modal">&times;</button>\
+             <h2 class="modal-title text-primary"><center> Documento N° ('+id+')</center></h2>\
            </div>\
            <div id = "body" class="modal-body">\
            		<br>\
@@ -299,29 +303,26 @@ function Dialog_Multiple(id){
         	   	<table id="myJsonPDFMultiples" class="display color-table" cellspacing="0" width="100%"></table>\
         	   	<div id="Dialogo-Multiples"> </div>\
             </div>l\
-            <div class="modal-footer hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">\
-            	<a type="button" id="iconPencil" onclick="javascript:InfoDocumentDataTablePDFMultiples(\'' + id + '\')"  class="hi-icon hi-icon hi-icon-list background"></a>\
-            	<a type="button" id="iconPencil" onclick="javascript:Firmar_Multiple(\'' + id + '\')"  class="hi-icon hi-icon-pencil background"></a>\
-            	<a type="button" id="iconnn" data-dismiss="modal" class="hi-icon hi-icon-locked background"></a>\
-            </div>\
+            <div class=" modal-footer">\
+             <table ALIGN=CENTER ><tr>\
+             	<td><div class ="hi-icon-wrap hi-icon-effect-6"><a type="button" id="iconPencil" href="https://murachi.cenditel.gob.ve/Murachi/0.1/archivos/descargas/' + id + '"  class="hi-icon hi-icon-contract background"></a><p>DESCARGAR</p></div></td>\
+				<td><div class ="hi-icon-wrap hi-icon-effect-6"><a type="button" id="iconPencil" onclick="javascript:VisualizarPDF(\'' + id + '\')"  class="hi-icon hi-icon-refresh background"></a><p>VISUALIZAR</p></div></td>\
+            	<td><div class ="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a"><a type="button" id="iconPencil" onclick="javascript:InfoDocumentDataTablePDFMultiples(\'' + id + '\')"  class="hi-icon hi-icon hi-icon-list background"></a><p>VERIFICAR</p></div></td>\
+            	<td><div class ="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a"><a type="button" id="iconPencil" onclick="javascript:Firmar_Multiple(\'' + id + '\')"  class="hi-icon hi-icon-pencil background"></a><p>FIRMAR</p></div></td>\
+            	<td><div class ="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a"><a type="button" id="iconnn" data-dismiss="modal" class="hi-icon hi-icon-locked background"></a><p>CERRAR</p></div></td>\
+             </tr></table>\
          </div>\
        </div>\
-    </div><script>\
-    $("#myModalMultiple").on("hide.bs.modal", function () {\
-    	alert("hidden event fired!");\
-    	})\
-    </script>\
+    </div></div>\
     ';
+*/
 
 }
 
 
+function VisualizarPDF(id){
+	document.getElementById("respuesta_FirmaMultiples").innerHTML = ''; 
+	$("#iframe").show();
+	$("#myJsonPDFMultiples_wrapper").hide();
 
-
-$("#myModalMultiple").on("hide.bs.modal", function () {
-    // do something…
-     alert('hidden event fired!aaaaaaaaaaa');
-})
-
-
-
+}
